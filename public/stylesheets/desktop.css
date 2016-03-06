@@ -1,0 +1,41 @@
+.app-container {
+	height:452px;
+	position:absolute;
+	width:254px;
+	overflow:auto;
+	margin-left:30px;
+	margin-top:95px;
+}
+
+.app {
+	margin-left:0px;
+	width:254px;
+	height:1111px;
+}
+
+.app-image {
+	margin-top:0px;
+}
+
+.message {
+	font-family:'freight_book'; 
+	font-size:16px;
+	text-align:center;
+	color:#1B1B1B;
+	width:254px;
+	top:55px;
+	left:0px;
+	position:absolute;
+	z-index:9;
+}
+
+.iphone-container {
+	background-image:url(../img/iphone.png); 
+	background-size:314px 654px;
+	width:314px;
+	height:654px;
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+}

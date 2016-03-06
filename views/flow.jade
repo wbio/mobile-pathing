@@ -1,0 +1,113 @@
+doctype 1.1
+html
+  head
+    title Mobile 5.x APIs
+    // 3rd Party Libraries
+    script(src='javascripts/util/jquery-1.11.0.min.js')
+    script(src='javascripts/util/jquery.mobile.custom.min.js')
+    script(src='javascripts/util/jquery.json.js')
+    script(src='javascripts/util/bootstrap.min.js')
+    script(src='javascripts/util/jquery.event.drag-2.2.js')
+    script(src='javascripts/util/jquery.event.drop-2.2.js')
+    script(src='javascripts/util/jquery.event.drag.live-2.2.js')
+    script(src='javascripts/util/jquery.event.drop.live-2.2.js')
+    // 1st Party Libraries
+    script(src='javascripts/main.js')
+    script(src='javascripts/floweditor.js')
+    // 3rd Party CSS
+    link(href='stylesheets/bootstrap.min.css', rel='stylesheet')
+    link(href='stylesheets/fontawesome/css/font-awesome.min.css', rel='stylesheet')
+    // 1st Party CSS
+    link(href='stylesheets/style.css', rel='stylesheet')
+    link(href='stylesheets/floweditor.css', rel='stylesheet')
+  body
+    #header
+      .header-section.left
+        span#page-name-sp(contenteditable='true', data-ph='Enter page name')
+      #save-name.header-section.left
+        | Save
+      #cancel-name.header-section.left
+        | Cancel
+      #jump-page.header-section.right.header-link
+        | Pages
+        i.fa.fa-angle-down
+      #flow-edit.header-section.right.header-link
+        | Flows
+        i.fa.fa-angle-down
+      #image-edit.header-section.right.header-link
+        | Image
+        i.fa.fa-angle-down
+      #links-edit.header-section.right.header-link
+        | Links
+        i.fa.fa-angle-down
+    #body-container
+      #dropdowns
+        #jump-page-dropdown.header-dropdown
+          .jump-actions
+            .jump-page-action.save-style(val-id='new', onclick='createNewPage();') New
+            .jump-page-action.cancel-style(onclick='deletePage();') Delete
+        #image-dropdown.header-dropdown
+          form#image-form(method='post', enctype='multipart/form-data')
+            input#uploadFile(placeholder='Choose File', disabled='disabled')
+            .fileUpload.btn.btn-primary
+              span
+                i.fa.fa-cloud-upload
+              input#uploadBtn.upload(type='file', name='image', pageid='test123')
+            br
+            button#image-upload.save-style(type='submit') Save
+        #links-dropdown.header-dropdown
+          span#links-dropdown-draw Draw Links
+          span#links-dropdown-edit Edit Links
+          span#links-dropdown-hide Hide Links
+        #flow-dropdown.header-dropdown
+          span#flow-name-sp(contenteditable='true', data-ph='Enter flow name')
+          #flow-actions
+            #delete-flow.cancel-style.flow-action.disabled Delete
+            #save-flow.save-style.flow-action.disabled Save
+          #jump-flows
+      #mid-container
+        img#iphone(src='images/iphone6.png')
+        #page-container
+          #page-inner-container
+            #foreground.page
+              #links
+              img#foreground-img.page-img
+            #background.page
+              #links
+              img#background-img.page-img
+      #right-container
+        #no-links-selected
+          | Select a link to edit
+        #link-actions
+          #link-options
+            .page-item.name
+              #linked-page
+                #linked-page-placeholder Drop page or click here to select target
+                #linked-page-obj Card | Pay Bill | Select Pay From
+            .page-item
+              | Transition:
+              select
+                option(value='default') Default
+                option(value='slide_bottom') Slide in from bottom
+                option(value='slide_top') Slide in from top
+                option(value='slide_left') Slide in from left
+                option(value='slide_right') Slide in from right
+                option(value='slidecurr_down') Slide current screen down
+                option(value='slidecurr_up') Slide current screen up
+                option(value='slidecurr_left') Slide current screen left
+                option(value='slidecurr_right') Slide current screen right
+                option(value='appear') Appear instantly
+                option(value='fade_300') Fade in - 0.3 sec.
+                option(value='scrolltop_appear') Scroll to top then appear
+            #redraw-link.page-item.link(onclick='redrawLink(this);')
+              | Re-draw Link
+            #save-link.save-div
+              button#cancel-link-button.cancel-button(onclick='cancelLink();') Cancel
+              button#save-link-button.save-button(onclick='saveLink(this);') Save
+          #other-pages
+            .page-obj(val-id='new') New Page
+    #link-edit
+      #link-editor
+      #popup-menu
+        #delete-link.menu-btn(title='Delete link', onclick='deleteLink();')
+          span.glyphicon.glyphicon-trash(aria-hidden='true')

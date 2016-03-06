@@ -1,0 +1,398 @@
+@font-face {
+    font-family: 'freight_book';
+    src: url('../../fonts/freightsansprolining-book-webfont.eot');
+    src: url('../../fonts/freightsansprolining-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/freightsansprolining-book-webfont.woff') format('woff'),
+         url('../../fonts/freightsansprolining-book-webfont.ttf') format('truetype'),
+         url('../../fonts/freightsansprolining-book-webfont.svg#freight_sans_pro_liningRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: "ProxReg";
+	src: url('../../fonts/proximanova-regular-webfont.eot?1404762668');
+	src: url('../../fonts/proximanova-regular-webfont.eot?&1404762668#iefix') format('embedded-opentype'), url('../../fonts/proximanova-regular-webfont.woff?1404762668') format('woff'), url('../../fonts/proximanova-regular-webfont.ttf?1404762668') format('truetype'), url('../../fonts/proximanova-regular-webfont.svg?1404762668') format('svg');
+}
+@font-face {
+	font-family: "ProxLight";
+	src: url('../../fonts/proxima-nova-light-webfont.eot?1404921104');
+	src: url('../../fonts/proxima-nova-light-webfont.eot?&1404921104#iefix') format('embedded-opentype'), url('../../fonts/proxima-nova-light-webfont.woff?1404921104') format('woff'), url('../../fonts/proxima-nova-light-webfont.ttf?1404921104') format('truetype'), url('../../fonts/proxima-nova-light-webfont.svg?1404921104') format('svg');
+}
+@font-face {
+	font-family: "ProxThin";
+	src: url('../../fonts/proxima-nova-thin-webfont.eot?1404919754');
+	src: url('../../fonts/proxima-nova-thin-webfont.eot?&1404919754#iefix') format('embedded-opentype'), url('../../fonts/proxima-nova-thin-webfont.woff?1404919754') format('woff'), url('../../fonts/proxima-nova-thin-webfont.ttf?1404919754') format('truetype'), url('../../fonts/proxima-nova-thin-webfont.svg?1404919754') format('svg');
+}
+
+@font-face {
+    font-family: 'ProxSemi';
+    src: url('../../fonts/ProximaNova-Sbold-webfont.eot');
+    src: url('../../fonts/ProximaNova-Sbold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/ProximaNova-Sbold-webfont.woff2') format('woff2'),
+         url('../../fonts/ProximaNova-Sbold-webfont.woff') format('woff'),
+         url('../../fonts/ProximaNova-Sbold-webfont.ttf') format('truetype'),
+         url('../../fonts/ProximaNova-Sbold-webfont.svg#proxima_nova_ltsemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*----------------------------------------------------------------------------------*/
+
+
+html, body {
+	height: 100%;
+	margin: 0;
+	background-color:#F4F0F3;
+	overflow:hidden;
+}
+
+#left-container {
+	position:absolute;
+	width:0px;
+	text-align:center;
+	font-family:'ProxReg';
+	color:#ededed;
+    background-color:#E7E4E7;
+	top:-10px;
+	bottom:-10px;
+	left:0;
+	padding-top:10px;
+	overflow:auto;
+}
+
+#right-container {
+	position:absolute;
+	width:300px;
+	text-align:center;
+	font-family:'ProxReg';
+	color:#ededed;
+    background-color:#E7E4E7;
+	top:-10px;
+	bottom:-10px;
+	left:-300px;
+	padding-top:10px;
+	overflow:auto;
+}
+
+.container-title {
+	display:none;
+	margin-bottom: 10px;
+	margin:0px 20px 10px 20px;
+	color:#6C6C6C;
+	font-size: 24px;
+	font-family: ProxThin;
+	border-bottom:1px dotted #c0c0c0;
+	-o-transition:.3s;
+    -ms-transition:.3s;
+    -moz-transition:.3s;
+    -webkit-transition:.3s;
+    transition:.3s;
+}
+
+/*----------------------------------------------------------------------------------*/
+
+#header {
+	width:100%;
+	height:56px;
+	background-color: #fff;
+	border-bottom:2px solid #C2BFC1;
+	padding:15px 40px 11px 40px;
+}
+
+.header-section {
+	font-family: 'ProxLight';
+	color: #01162a;
+	font-size: 18px;
+	line-height: 28px;
+}
+
+.header-section.left {
+	float:left;
+	margin-right:10px;
+}
+
+.header-section.right {
+	float:right;
+	margin-left:30px;
+	cursor:pointer;	
+}
+
+.header-section.header-link:hover {
+	color:#008ac1;
+}
+
+.header-section > .fa {
+	margin-left:8px;
+    -o-transition:.2s;
+    -ms-transition:.2s;
+    -moz-transition:.2s;
+    -webkit-transition:.2s;
+    transition:.2s;      
+    -webkit-transition:all ease-out 200ms;
+}
+
+.header-section.upside > .fa.fa-angle-down {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+
+.header-dropdown {
+	background-color:#fff;
+	border:2px solid #C2BFC1;
+	border-top:none;
+	position:absolute;
+	top:-12px;
+	padding:10px 20px;
+	max-height:90%;
+	overflow-y:auto;
+	display:none;
+}
+
+#jump-page-dropdown {
+	max-width:240px;
+	right:20px;
+}
+
+#image-dropdown {
+	right:80px;
+}
+
+#links-dropdown {
+	max-width:200px;
+	right:270px;
+}
+
+.jump-page-obj {
+	padding:3px 0 3px 16px;
+    text-indent:-16px;
+    cursor:pointer;
+    border-bottom:1px dotted #ccc;
+}
+
+.jump-page-obj:hover, #links-dropdown > span:hover {
+	color:#008ac1;
+}
+
+#links-dropdown > span {
+	display:block;
+	padding: 3px 8px;
+	cursor:pointer;
+	border-radius:3px;
+	-o-transition:.3s;
+    -ms-transition:.3s;
+    -moz-transition:.3s;
+    -webkit-transition:.3s;
+    transition:.3s;
+}
+
+#links-dropdown > span.active, #links-dropdown > span.active:hover {
+	background-color:#008ac1;
+	color:#fff;
+}
+
+.save-style {
+	color: #fff;
+	background-color: #089900;
+	border-radius: 3px;
+	font-size: 16px;
+	text-align: center;
+	cursor:pointer;
+}
+
+.save-style:hover {
+	background-color: #097f01;
+}
+
+.cancel-style {
+	color: #fff;
+	background-color:#C71621;
+	border-radius: 3px;
+	font-size: 16px;
+	text-align: center;
+	cursor:pointer;
+}
+
+.cancel-style:hover {
+	background-color:#9e0c13;
+}
+
+
+
+/*----------------------------------------------------------------------------------*/
+
+#body-container {
+	position: absolute;
+	top: 66px;
+	bottom: 10px;
+	left: 0px;
+	right: 0px;
+}
+
+#mid-container {
+	position:relative;
+	min-height:100%;
+	height:100%;
+	margin:0 auto;
+}
+
+#mid-container > #iphone {
+	height:100%;
+	margin:0% 24.3066%;
+}
+
+#page-container {
+	background-color: #3D4142;
+	position: absolute;
+	overflow:hidden;
+	z-index: 5;
+	top: 13.6%;
+	left: 29.7%;
+	right: 29.99%;
+	bottom:14.3%;
+}
+
+#page-inner-container {
+	overflow: scroll;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	-ms-overflow-style: none;
+}
+
+#page-inner-container::-webkit-scrollbar { 
+	display:none;
+}
+
+.page {
+	width:100%;
+	position:absolute;
+}
+
+.page#foreground {
+	z-index:4;
+}
+
+.page#background {
+	z-index:3;
+}
+
+.page-img {
+	width:100%;
+}
+
+img.page-img {
+	display: none;
+}
+
+
+img.page-img[src] {
+	display: inline;
+ }
+
+.noshow {
+	display:none;
+}
+
+/*----------------------------------------------------------------------------------*/
+
+
+#links {
+	z-index:5;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+}
+
+#links > .link {
+	position:absolute;
+	cursor:pointer;
+	border: 1px dashed rgba(0,0,0,0.6);
+	background: repeating-linear-gradient(
+	  45deg,
+	  rgba(255,170,0,0.4),
+	  rgba(255,170,0,0.4) 3px,
+	  rgba(255,213,130,0.4) 3px,
+	  rgba(255,213,130,0.4) 6px
+	);
+}
+
+#links > .link.complete {
+	border: 1px dotted rgba(0,0,0,0.6);
+	background: repeating-linear-gradient(
+	  135deg,
+	  rgba(77,232,0,0.4),
+	  rgba(77,232,0,0.4) 3px,
+	  rgba(170,255,124,0.4) 3px,
+	  rgba(170,255,124,0.4) 6px
+	);
+}
+
+#flow-dropdown {
+	right:100px;
+}
+
+#flow-name-sp {
+	width:200px;
+	display:block;
+	text-align:center;
+	box-shadow: none;
+	border: 2px solid #c2c0c6;
+	background-color:#F5F5F7;
+	padding: 3px 10px;
+	border-radius: 3px;
+	-o-transition: .3s;
+	-ms-transition: .3s;
+	-moz-transition: .3s;
+	-webkit-transition: .3s;
+	transition: .3s;
+}
+
+#flow-name-sp:focus {
+	border: 2px solid #009ED8;
+	background-color:#F5F5F7;
+	box-shadow: none;
+	outline:0 none;
+}
+
+#flow-actions {
+	padding:5px 0 10px;
+	border-bottom:1px dotted #ccc;
+	text-align:center;
+}
+
+.flow-action {
+	display:inline-block;
+	margin-left: 5px;
+	margin-right: 5px;
+	padding:5px;
+	font-size:12px;
+}
+
+#jump-flows {
+
+}
+
+.jump-flow {
+	display: block;
+	text-align: center;
+	cursor:pointer;
+	border-bottom:1px dotted #ccc;
+	padding: 3px 0 3px 16px;
+	text-indent: -16px;
+}
+
+.jump-flow:hover {
+	color:#009ED8;
+}
+
+.flow-action.disabled, .flow-action.disabled:hover {
+	background-color:#ccc;
+	cursor:default;
+}
